@@ -1,15 +1,14 @@
-// lyrics (Array) - Output from parseLyric function
-// time (Number) - Current time from the audio player
-function syncLyric(lyrics, time) {
-    const scores = ['6:46'];
+window.onSpotifyIframeApiReady = (IFrameAPI) => {
+    const element = document.getElementById('embed-iframe');
+    const options = {
+        uri: 'spotify:episode:7makk4oTQel546B0PZlDM5'
+    };
+    const callback = (EmbedController) => { };
+    IFrameAPI.createController(element, options, callback);
+};
 
-    lyrics.forEach(lyric => {
-        const score = time - lyric.time;
-        if (score >= 0) scores.push(score);
-    });
-
-    if (scores.length === 0) return null;
-
-    const closest = Math.min(...scores);
-    return scores.indexOf(closest); // Return the index of the closest lyric
-}
+const options = {
+    width: '50%',
+    height: '100',
+    uri: 'spotify:episode:7makk4oTQel546B0PZlDM5'
+};
