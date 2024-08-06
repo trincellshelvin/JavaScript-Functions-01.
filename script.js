@@ -1,9 +1,9 @@
 function refrain() {
     let words = "";
-    words += "For Your glory"
-    words += "I will do anything"
-    words += "Just to see You"
-    words += "To behold You as my King"
+    words += "For Your glory\n"
+    words += "I will do anything\n"
+    words += "Just to see You\n"
+    words += "To behold You as my King\n"
     return words;
 }
 
